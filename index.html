@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="UTF-8">
+	
+	<title>Gem Collector</title>
+
+	<!--CSS Files-->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!--Bootstrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+	<div class="container">	
+
+		<!--Title Section-->
+		<div class="jumbotron" style="background-color: #343a40; color: white;">
+			<div class="container">
+				<h1 class="text-center display-2"><strong>Gem Collector</strong></h1>
+			</div>
+		</div>
+
+		<!--Instuction Row-->
+		<div class="row"> 
+			<div class="col-lg-12">
+				<div class="card text-white bg-dark">
+					<div class="card-header">
+						<h3 class="card-title text-center">How to Play</h3>
+					</div>
+					<div class="card-body text-center">
+						<p><small>You will be given a random number at the start of the game. There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score. You win the game by matching your total score to the randomly generated number, you lose the game if your total exceeds the random number.The value of each crystal is hidden from you until you click on it.Each time the game starts, all the values will change.</small></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<br>
+
+		<!--Row containing number to be guessed, your current number, and gems-->
+		<div class="row">
+
+			<!--Where randomly generated number is displayed-->			
+			<div class="col-lg-3">
+				<div class="card text-white bg-dark">
+					<div class="card-header">
+						<h3 class="card-title text-center">Goal Number</h3>
+					</div>
+					<div class="card-body text-center">
+						<h3 id="targetScore"></h3>
+					</div>
+				</div>
+			</div>
+
+			<!--Where the number you are currently at is diplayed-->
+			<div class="col-lg-3">
+				<div class="card text-white bg-dark">
+					<div class="card-header">
+						<h3 class="card-title text-center">Current Number</h3>
+					</div>
+					<div class="card-body text-center">
+						<h3 id="currentScore"></h3>
+					</div>
+				</div>
+			</div>
+
+			<!--Where the crystal images are diplayed-->
+			<div class="col-lg-6">
+				<div class="card text-white bg-dark">
+					<div class="card-header">
+						<h3 class="card-title text-center">Your Gems</h3>
+					</div>
+					<div class="card-body text-center">
+						<img src="assets/images/purple.png" style="height: 40px;" id="purple" alt="Purple Gem">
+						<img src="assets/images/black.png" style="height: 40px;" id="black" alt="Black Gem">
+						<img src="assets/images/green.png" style="height: 40px;" id="green" alt="Green Gem">
+						<img src="assets/images/red.png" style="height: 40px;" id="red" alt="Red Gem">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<br>
+
+		<!--Where the win/loss counters are held-->
+		<div class="row">
+
+			<!--Wins-->
+			<div class="col-lg-6">
+				<div class="card text-white bg-dark">
+					<div class="card-header">
+						<h3 class="card-title text-center">Wins</h3>
+					</div>
+					<div class="card-body text-center">
+						<h3 id="wins">0</h3>
+					</div>
+				</div>
+			</div>
+
+			<!--Loses-->
+			<div class="col-lg-6">
+				<div class="card text-white bg-dark">
+					<div class="card-header">
+						<h3 class="card-title text-center">Loses</h3>
+					</div>
+					<div class="card-body text-center">
+						<h3 id="losses">0</h3>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+
+	<!--Jquery-->
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
+	</script>
+
+	<!--My Javascript-->
+	<script src="assets/javascript/game.js"></script>
+
+
+
+</body>
+</html>
